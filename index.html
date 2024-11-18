@@ -85,6 +85,99 @@
             </pre>
         </div>
     </div>
+    <div class="container">
+        <h1>प्रदेश व्यवस्थापन कार्यविधि</h1>
+        <div class="chart">
+            <pre class="mermaid">
+                flowchart TD
+                A["विधेयक प्रस्तुत\n(१९८.१)"]
+                B["अर्थ विधेयक वा शान्ति सुरक्षा\nसम्बन्धी विधेयक?\n(१९८.२)"]
+                C["सरकारी विधेयकको रूपमा प्रस्तुत\n(१९८.२)"]
+                D["अन्य विधेयक"]
+                E["अर्थ विधेयक सम्बन्धी विवाद?\n(१९८.४)"]
+                F["सभामुखको निर्णय अन्तिम\n(१९८.४)"]
+                G["प्रदेश सभामा विधेयक पारित\n(१९९.१)"]
+                H["सभामुखद्वारा प्रमाणित\n(२०१.१)"]
+                I["प्रदेश प्रमुख समक्ष पेश\n(२०१.१)"]
+                J["प्रदेश प्रमुखको निर्णय\n(२०१.२, २०१.३)"]
+                K["१५ दिन भित्र प्रमाणीकरण\n(२०१.२)"]
+                L["पुनर्विचारको लागि सन्देश सहित फिर्ता\n१५ दिन भित्र\n(२०१.३)"]
+                M["प्रदेश सभामा पुनर्विचार\n(२०१.४)"]
+                N["संशोधन सहित वा प्रस्तुत\nरूपमा पारित\n(२०१.४)"]
+                O["१५ दिन भित्र प्रमाणीकरण\n(२०१.४)"]
+                P["ऐन बन्ने\n(२०१.५)"]
+                
+                A --> B
+                B -->|हो| C
+                B -->|होइन| D
+                C --> E
+                D --> E
+                E --> F
+                F --> G
+                G --> H
+                H --> I
+                I --> J
+                J -->|स्वीकृत| K
+                J -->|अस्वीकृत| L
+                L --> M
+                M --> N
+                N --> O
+                K --> P
+                O --> P
+                
+                style A fill:#f9f,stroke:#333,stroke-width:2px
+                style P fill:#9f9,stroke:#333,stroke-width:2px
+
+            </pre>
+        </div>
+        </div>
+
+        <div class="container">
+            <h1>Provincial Legislative Process</h1>
+            <div class="chart">
+                <pre class="mermaid">
+                    flowchart TD
+    A["Bill Introduction\n(198.1)"]
+    B["Is it Finance Bill or\nPeace & Security Bill?\n(198.2)"]
+    C["Present as Government Bill\n(198.2)"]
+    D["Other Bills"]
+    E["Dispute about Finance Bill?\n(198.4)"]
+    F["Speaker's Decision Final\n(198.4)"]
+    G["Bill Passed in\nProvincial Assembly\n(199.1)"]
+    H["Authenticated by Speaker\n(201.1)"]
+    I["Presented to\nHead of Province\n(201.1)"]
+    J["Decision by Head of Province\n(201.2, 201.3)"]
+    K["Authentication within\n15 days\n(201.2)"]
+    L["Return with Message\nwithin 15 days\n(201.3)"]
+    M["Reconsideration in\nProvincial Assembly\n(201.4)"]
+    N["Passed with or\nwithout Amendment\n(201.4)"]
+    O["Authentication within\n15 days\n(201.4)"]
+    P["Becomes Act\n(201.5)"]
+    
+    A --> B
+    B -->|Yes| C
+    B -->|No| D
+    C --> E
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> J
+    J -->|Approved| K
+    J -->|Not Approved| L
+    L --> M
+    M --> N
+    N --> O
+    K --> P
+    O --> P
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style P fill:#9f9,stroke:#333,stroke-width:2px
+
+</pre>
+</div>
+</div>
 
     <div class="container">
         <h1>Treaty Ratification Process in Nepal</h1>
