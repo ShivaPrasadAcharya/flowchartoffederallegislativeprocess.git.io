@@ -1,20 +1,13 @@
-// script.js
-document.addEventListener('DOMContentLoaded', function() {
-    const features = document.querySelectorAll('.feature-item');
-    
-    features.forEach((feature, index) => {
-        feature.style.animationDelay = `${index * 0.2}s`;
-        feature.classList.add('fade-in');
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  // Add an event listener for user interaction or dynamic customization
+  console.log("Mermaid chart rendered successfully!");
 
-    // Add hover effect
-    features.forEach(feature => {
-        feature.addEventListener('mouseenter', () => {
-            feature.style.transform = 'translateY(-5px)';
-        });
-        
-        feature.addEventListener('mouseleave', () => {
-            feature.style.transform = 'translateY(0)';
-        });
-    });
+  // Example: Highlight a node when clicked
+  document.querySelector(".chart").addEventListener("click", (e) => {
+      if (e.target.tagName === "text") {
+          const node = e.target;
+          node.setAttribute("fill", "red");
+          setTimeout(() => node.setAttribute("fill", ""), 2000);
+      }
+  });
 });
