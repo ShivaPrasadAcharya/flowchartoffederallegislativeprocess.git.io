@@ -3,52 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bill Process Flowchart</title>
+    <title>Nepal Legislative Process</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.0/mermaid.min.js"></script>
-    <script src="scripts.js" defer></script>
-    <script>
-        mermaid.initialize({ startOnLoad: true });
-    </script>
 </head>
 <body>
     <div class="container">
-        <h1>Federal Legislative Process (art. 110-113)</h1>
-        <p>This flowchart illustrates the process of passing bills in Nepal's Federal Parliament, including Money Bills and General Bills.</p>
-        <div class="mermaid chart">
-            graph TD
-            A[Bill Introduced] --> B{Money Bill?}
-            B --> |Yes|C[House of Representatives]
-            B --> |No|D[Any House]
-            
-            C --> E[Passed by HoR]
-            E --> F[To National Assembly]
-            
-            F --> G{Within 15 days}
-            G --> |Suggestion|H[Back to HoR]
-            G --> |No Action|I[To President]
-            
-            D --> J[Passed by House]
-            J --> K[Other House]
-            
-            K --> L{Within 2 months}
-            L --> |Passed|M[To President]
-            L --> |Rejected|N[Back to Origin]
-            
-            N --> O[Reconsidered]
-            O --> M
-            
-            H --> P[Review in HoR]
-            P --> M
-            
-            M --> Q{President}
-            Q --> |15 days|R[Becomes Act]
-            Q --> |Return|S[Reconsider]
-            
-            S --> T[Re-pass]
-            T --> U[To President]
-            U --> R
+        <h1>विधेयक प्रक्रिया फ्लोचार्ट</h1>
+        <p>नेपालको संघीय संसदमा विधेयक पारित गर्ने प्रक्रियाको चित्रण</p>
+        <div class="chart">
+            <pre class="mermaid">
+                flowchart TD
+                A[विधेयक प्रस्तुत] --> B{अर्थ विधेयक हो?}
+                B -->|हो| C[प्रतिनिधि सभामा मात्र प्रस्तुत]
+                B -->|होइन| D[कुनै पनि सदनमा प्रस्तुत]
+                C --> E[प्रतिनिधि सभाद्वारा पारित]
+                E --> F[राष्ट्रिय सभामा पठाइने]
+                F --> G{15 दिन भित्र सुझाव?}
+                G -->|छ| H[सुझाव सहित फिर्ता]
+                G -->|छैन| I[प्रतिनिधि सभाले राष्ट्रपति समक्ष पेश]
+                H --> J[प्रतिनिधि सभामा छलफल]
+                J --> K[उचित सुझाव समावेश]
+                D --> L[सदनद्वारा पारित]
+                L --> M[अर्को सदनमा पठाइने]
+                M --> N{2 महिना भित्र?}
+                N -->|पारित| O[राष्ट्रपति समक्ष पेश]
+                N -->|अस्वीकृत/संशोधन| P[उत्पत्ति सदनमा फिर्ता]
+                P --> Q[उत्पत्ति सदनमा पुनर्विचार]
+                Q --> R[बहुमतले पुन: पारित]
+                K --> O
+                I --> O
+                R --> O
+                O --> S{राष्ट्रपतिको निर्णय}
+                S -->|15 दिन भित्र प्रमाणीकरण| T[ऐन बन्ने]
+                S -->|पुनर्विचारको लागि फिर्ता| U[सदनमा पुनर्विचार]
+                U --> V[दुवै सदनले पुन: पारित]
+                V --> W[राष्ट्रपति समक्ष पेश]
+                W --> X[15 दिन भित्र प्रमाणीकरण]
+                X --> T
+            </pre>
         </div>
     </div>
+
+    <div class="container">
+        <h1>Federal Legislative Process (art. 110-113)</h1>
+        <p>This flowchart illustrates the process of passing bills in Nepal's Federal Parliament, including Money Bills and General Bills.</p>
+        <div class="chart">
+            <pre class="mermaid">
+                graph TD
+                A[Bill Introduced] --> B{Money Bill?}
+                B --> |Yes|C[House of Representatives]
+                B --> |No|D[Any House]
+                
+                C --> E[Passed by HoR]
+                E --> F[To National Assembly]
+                
+                F --> G{Within 15 days}
+                G --> |Suggestion|H[Back to HoR]
+                G --> |No Action|I[To President]
+                
+                D --> J[Passed by House]
+                J --> K[Other House]
+                
+                K --> L{Within 2 months}
+                L --> |Passed|M[To President]
+                L --> |Rejected|N[Back to Origin]
+                
+                N --> O[Reconsidered]
+                O --> M
+                
+                H --> P[Review in HoR]
+                P --> M
+                
+                M --> Q{President}
+                Q --> |15 days|R[Becomes Act]
+                Q --> |Return|S[Reconsider]
+                
+                S --> T[Re-pass]
+                T --> U[To President]
+                U --> R
+            </pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
