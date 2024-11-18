@@ -1,46 +1,54 @@
-flowchart TD
-    A[विधेयक प्रस्तुत\n१११] --> B{अर्थ विधेयक हो?\n११०(३),(४)}
-    B -->|हो| C[प्रतिनिधि सभामा मात्र प्रस्तुत\n११०(१)]
-    B -->|होइन| D[कुनै पनि सदनमा प्रस्तुत\n११०(१)]
-    
-    C --> E[प्रतिनिधि सभाद्वारा पारित\n१११(१)]
-    E --> EA[सभामुखद्वारा अर्थ विधेयक भनी प्रमाणित\n११३(१)]
-    EA --> F[राष्ट्रिय सभामा पठाइने\n१११(२)]
-    
-    F --> G{15 दिन भित्र सुझाव?\n१११(२)}
-    G -->|छ| H[सुझाव सहित फिर्ता\n१११(२)]
-    G -->|छैन| I[प्रतिनिधि सभाले राष्ट्रपति समक्ष पेश\n१११(४)]
-    
-    H --> J[प्रतिनिधि सभामा छलफल\n१११(३)]
-    J --> K[उचित सुझाव समावेश\n१११(३)]
-    
-    D --> L[सदनद्वारा पारित\n१११(१)]
-    L --> LA[सभामुख/अध्यक्षद्वारा प्रमाणित\n११३(१)]
-    LA --> M[अर्को सदनमा पठाइने\n१११(१)]
-    
-    M --> N{2 महिना भित्र?\n१११(५)}
-    N -->|पारित| O[राष्ट्रपति समक्ष पेश]
-    N -->|अस्वीकृत/संशोधन| P[उत्पत्ति सदनमा फिर्ता\n१११(६)]
-    
-    P --> Q[उत्पत्ति सदनमा पुनर्विचार\n१११(७)]
-    Q --> R[बहुमतले पुन: पारित\n१११(७)]
-    
-    K --> O
-    I --> O
-    R --> O
-    
-    O --> S{राष्ट्रपतिको निर्णय\n११३(२),(३)}
-    S -->|15 दिन भित्र प्रमाणीकरण| T[ऐन बन्ने\n११३(५)]
-    S -->|पुनर्विचारको लागि फिर्ता| U[सदनमा पुनर्विचार\n११३(३)]
-    
-    U --> V[दुवै सदनले पुन: पारित\n११३(४)]
-    V --> W[राष्ट्रपति समक्ष पेश\n११३(४)]
-    W --> X[15 दिन भित्र प्रमाणीकरण\n११३(४)]
-    X --> T
-
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style T fill:#9f9,stroke:#333,stroke-width:2px
-    
-    %% Notes for key processes
-    classDef note fill:#fff,stroke:#333,stroke-width:1px
-    class A,T note
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Process Flowchart</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.0/mermaid.min.js"></script>
+    <script src="scripts.js" defer></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Bill Passing Process</h1>
+        <p>This flowchart illustrates the process of passing bills in Nepal's Federal Parliament, including Money Bills and General Bills.</p>
+        <div class="mermaid chart">
+            graph TD
+            A[Bill Introduced] --> B{Money Bill?}
+            B --> |Yes|C[House of Representatives]
+            B --> |No|D[Any House]
+            
+            C --> E[Passed by HoR]
+            E --> F[To National Assembly]
+            
+            F --> G{Within 15 days}
+            G --> |Suggestion|H[Back to HoR]
+            G --> |No Action|I[To President]
+            
+            D --> J[Passed by House]
+            J --> K[Other House]
+            
+            K --> L{Within 2 months}
+            L --> |Passed|M[To President]
+            L --> |Rejected|N[Back to Origin]
+            
+            N --> O[Reconsidered]
+            O --> M
+            
+            H --> P[Review in HoR]
+            P --> M
+            
+            M --> Q{President}
+            Q --> |15 days|R[Becomes Act]
+            Q --> |Return|S[Reconsider]
+            
+            S --> T[Re-pass]
+            T --> U[To President]
+            U --> R
+        </div>
+    </div>
+</body>
+</html>
