@@ -767,6 +767,108 @@ flowchart TD
         </pre>
     </div>
     </div>
+<div class="container">
+    <h1>Federal Financial Procedure</h1>
+    <div class="chart">
+        <pre class="mermaid">
+
+            graph TB
+    %% Main styles
+    classDef male fill:#2471A3,stroke:#333,stroke-width:2px,color:white
+    classDef female fill:#DB7093,stroke:#333,stroke-width:2px,color:white
+    classDef marriage fill:none,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
+    classDef divine fill:#229954,stroke:#333,stroke-width:2px,color:white
+    classDef death fill:#8B0000,stroke:#333,stroke-width:2px,color:white
+    classDef survived fill:#006400,stroke:#333,stroke-width:2px,color:white
+
+    %% Divine fathers and parents level
+    subgraph DivineAndParents[" "]
+        Yam[/"यम"\] & Vayu[/"वायु"\] & Indra[/"इन्द्र"\] & Ashwini[/"अश्विनीकुमार"\]
+        Pandu(("पाण्डु")) --- Marriage1{{"♥"}} --- Kunti(("कुन्ती"))
+        Pandu --- Marriage2{{"♥"}} --- Madri(("माद्री"))
+    end
+
+    %% Pandavas level
+    subgraph Pandavas[" "]
+        Yudhishthir(("युधिष्ठिर")) & Bhim(("भीम")) & Arjun(("अर्जुन")) & Nakul(("नकुल")) & Sahadev(("सहदेव"))
+    end
+
+    %% Wives level
+    subgraph Wives[" "]
+        Draupadi(("द्रौपदी"))
+        Hidimba(("हिडिम्बा"))
+        Balnika(("बलनिका"))
+        Chitrangada(("चित्रांगदा"))
+        Ulupi(("उलूपी"))
+        Subhadra(("सुभद्रा"))
+    end
+
+    %% Children level
+    subgraph Children[" "]
+        Prativindhya[/"प्रतिविन्ध्य
+        ✝ अश्वत्थामाद्वारा"\]
+        
+        SrutkirtiFD[/"श्रुतकीर्ति
+        ✝ अश्वत्थामाद्वारा"\]
+        
+        Ghatotkach[/"घटोत्कच
+        ✝ कर्णको वासवी शक्तिद्वारा"\]
+        
+        Sutsom[/"सुतसोम
+        ✝ अश्वत्थामाद्वारा"\]
+        
+        SrutkirtiAD[/"श्रुतकीर्ति
+        ✝ अश्वत्थामाद्वारा"\]
+        
+        Babhruvan[["बभ्रुवाहन
+        ★ मणिपुरका राजा"]]
+        
+        Iravan[/"इरावान
+        ✝ अलायुधद्वारा"\]
+        
+        Abhimanyu[/"अभिमन्यु
+        ✝ चक्रव्यूहमा"\]
+        
+        Shatanik[/"शतानीक
+        ✝ अश्वत्थामाद्वारा"\]
+        
+        Shrutkarm[/"श्रुतकर्मा
+        ✝ अश्वत्थामाद्वारा"\]
+    end
+
+    %% Relationships
+    Yam -.-> Yudhishthir
+    Vayu -.-> Bhim
+    Indra -.-> Arjun
+    Ashwini -.-> Nakul & Sahadev
+
+    Kunti --> Yudhishthir & Bhim & Arjun
+    Madri --> Nakul & Sahadev
+
+    %% Marriages and children
+    Yudhishthir --- Draupadi --> Prativindhya
+    Bhim --- Draupadi --> SrutkirtiFD
+    Bhim --- Hidimba --> Ghatotkach
+    Bhim --- Balnika --> Sutsom
+    
+    Arjun --- Draupadi --> SrutkirtiAD
+    Arjun --- Chitrangada --> Babhruvan
+    Arjun --- Ulupi --> Iravan
+    Arjun --- Subhadra --> Abhimanyu
+    
+    Nakul --- Draupadi --> Shatanik
+    Sahadev --- Draupadi --> Shrutkarm
+
+    %% Apply styles
+    class Pandu,Yudhishthir,Bhim,Arjun,Nakul,Sahadev male
+    class Kunti,Madri,Draupadi,Hidimba,Balnika,Chitrangada,Ulupi,Subhadra female
+    class Marriage1,Marriage2 marriage
+    class Yam,Vayu,Indra,Ashwini divine
+    class Prativindhya,SrutkirtiFD,Ghatotkach,Sutsom,SrutkirtiAD,Iravan,Abhimanyu,Shatanik,Shrutkarm death
+    class Babhruvan survived
+            </pre>
+    </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
