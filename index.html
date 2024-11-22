@@ -8,7 +8,66 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+            <div class="container">
+        <h1> Appellate Jurisdiction of Supreme Court</h1>
+               <div class="chart">
+            <pre class="mermaid">
+                flowchart TD
+    A[Supreme Court's Appellate Jurisdiction<br>Section 9] --> B["Section 9.1.a:<br>Cases originally tried by High Court<br>under Section 8.2"]
+    
+    A --> C["Section 9.1.b:<br>Cases where High Court sentenced<br>imprisonment of 10 years or more"]
+    
+    A --> D["Section 9.1.c:<br>Cases where High Court partially/fully<br>reversed lower court's decision"]
+    
+    A --> E["Section 9.1.d:<br>Other cases as per<br>Federal Law"]
+    
+    A --> F["Section 9.2:<br>Cases submitted for<br>Confirmation"]
+    
+    D --> G{Must meet at least<br>one criterion}
+    
+    G --> H[Imprisonment exceeding<br>3 years]
+    G --> I[Fine exceeding<br>Rs. 500,000]
+    G --> J[Amount in dispute exceeding<br>Rs. 2,500,000]
+    
+    style A fill:#2b6cb0,stroke:#1a365d,stroke-width:2px,color:white
+    style G fill:#4299e1,stroke:#2c5282,stroke-width:2px
+    style B,C,D,E,F fill:#63b3ed,stroke:#2c5282,stroke-width:1px
+    style H,I,J fill:#90cdf4,stroke:#2c5282,stroke-width:1px
     <div class="container">
+             </pre>
+        </div>
+        </div>
+                <div class="container">
+        <h1> सर्वोच्च अदालतको पुनरावेदकीय क्षेत्राधिकार </h1>
+               <div class="chart">
+            <pre class="mermaid">
+
+             flowchart TD
+    A[सर्वोच्च अदालतको पुनरावेदन क्षेत्राधिकार<br>दफा ९] --> B["दफा ९.१.क:<br>उच्च अदालतले शुरु कारवाही र किनारा<br>गरेका मुद्दाहरू"]
+    
+    A --> C["दफा ९.१.ख:<br>उच्च अदालतबाट दश वर्ष वा सोभन्दा<br>बढी कैद सजाय हुने गरी फैसला भएका मुद्दा"]
+    
+    A --> D["दफा ९.१.ग:<br>उच्च अदालतले तल्लो निकायको निर्णय<br>आंशिक वा पूरै बदर गरेका मुद्दा"]
+    
+    A --> E["दफा ९.१.घ:<br>संघीय कानून बमोजिम<br>सर्वोच्च अदालतमा पुनरावेदन लाग्ने मुद्दा"]
+    
+    A --> F["दफा ९.२:<br>साधक पेश भएका मुद्दा"]
+    
+    D --> G{कम्तीमा एउटा<br>अवस्था पूरा हुनुपर्ने}
+    
+    G --> H[तीन वर्षभन्दा बढी<br>कैद सजाय भएको]
+    G --> I[पाँच लाख रुपैयाँभन्दा<br>बढी जरिवाना भएको]
+    G --> J[पच्चीस लाख रुपैयाँभन्दा<br>बढी बिगो भएको]
+    
+    style A fill:#2b6cb0,stroke:#1a365d,stroke-width:2px,color:white
+    style G fill:#4299e1,stroke:#2c5282,stroke-width:2px
+    style B,C,D,E,F fill:#63b3ed,stroke:#2c5282,stroke-width:1px
+    style H,I,J fill:#90cdf4,stroke:#2c5282,stroke-width:1px   
+
+         </pre>
+        </div>
+        </div>
+    
         <h1>विधेयक प्रक्रिया फ्लोचार्ट</h1>
         <p>नेपालको संघीय संसदमा विधेयक पारित गर्ने प्रक्रियाको चित्रण</p>
         <div class="chart">
@@ -44,6 +103,7 @@
             </pre>
         </div>
     </div>
+
 
     <div class="container">
         <h1>Federal Legislative Process (art. 110-113)</h1>
