@@ -695,7 +695,71 @@ flowchart TD
 </pre>
 </div>
 </div>
+        <div class="container">
+        <h1>Treaty Making Process</h1>
+        <div class="chart">
+            <pre class="mermaid">
+flowchart TD
+    %% Pre-negotiation Phase
+    Start([Start]) --> ID[Identification of Needs & Goals]
+    ID --> PA[Policy Analysis]
+    PA --> SC[Stakeholder Consultation]
+    SC --> MA[Mandate Authorization]
+    MA --> FT[Formation of Treaty Team]
+    FT --> PS[Preparation Strategy]
+    
+    %% Negotiation & Formation
+    PS --> A[Negotiation]
+    A --> B[Authentication of Text]
+    B --> C[Expression of Consent to be Bound]
+    
+    C --> D{Method of Expression}
+    D -->|Signature| E[Definitive Signature]
+    D -->|Exchange| F[Exchange of Instruments]
+    D -->|Ratification| G[Ratification]
+    D -->|Acceptance| H[Acceptance]
+    D -->|Approval| I[Approval]
+    D -->|Accession| J[Accession]
+    
+    E --> K[Entry into Force]
+    F --> K
+    G --> K
+    H --> K
+    I --> K
+    J --> K
+    
+    %% Reservations Process
+    K --> L{Reservations?}
+    L -->|Yes| M[Submit Reservations]
+    M --> N[Other Parties Accept/Object]
+    N --> O[Treaty in Force with Reservations]
+    L -->|No| P[Treaty in Force as Written]
+    
+    %% Registration and Implementation
+    O --> REG[Registration with UN Secretariat]
+    P --> REG
+    REG --> PUB[Publication in UNTS]
+    PUB --> Q[Implementation & Observation]
+    
+    %% Ongoing Process
+    Q --> R{Amendments/Modifications?}
+    R -->|Yes| S[Amendment Process]
+    S --> Q
+    R -->|No| Q
+    
+    Q --> T{Termination/Withdrawal?}
+    T -->|Yes| U[End of Treaty Relations]
+    T -->|No| Q
 
+    %% Styling
+    classDef process fill:#e1f3fe,stroke:#333,stroke-width:1px;
+    classDef decision fill:#ffe8e8,stroke:#333,stroke-width:1px;
+    class ID,PA,SC,MA,FT,PS,A,B,C,E,F,G,H,I,J,K,M,N,O,P,REG,PUB,Q,S,U process;
+    class D,L,R,T decision;
+        </pre>
+</div>
+            <p> This flow chart is prepared based on VCLT, 1969)</p>
+</div>        
     <div class="container">
         <h1>Treaty Ratification Process in Nepal</h1>
         <div class="chart">
